@@ -1,3 +1,5 @@
+[![Build Status](https://api.travis-ci.org/bitnami/node-compilation-utils.svg?branch=master)](http://travis-ci.org/bitnami/node-compilation-utils)
+
 # Compilation Utils
 
 This package is a toolset for dealing with compilation tools.
