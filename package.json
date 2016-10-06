@@ -1,6 +1,6 @@
 {
   "name": "compilation-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Some functions utils for compilation",
   "main": "index.js",
   "repository": {
@@ -20,7 +20,7 @@
   "author": "Bitnami",
   "license": "GPL-2.0",
   "dependencies": {
-    "common-utils": "bitnami/node-common-utils#v2.0.0",
+    "common-utils": "bitnami/node-common-utils#v2.0.1",
     "nami-utils": "^0.1.0"
   },
   "devDependencies": {
