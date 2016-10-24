@@ -35,10 +35,15 @@ function runWithinEnvironment(cwd, cmd, args, options) {
     options = args;
     args = [];
   }
-  options = _.opts(options, {cwd, env: {}, logger: null});
+  options = options || {};
+  const _options = _.opts(_.cloneDeep(options), {cwd, env: {}, logger: null, retrieveStdStreams: true});
   if (_.isNull(args) || _.isUndefined(args)) args = [];
-
-  return u.logExec(cmd, args, options);
+  const result = u.logExec(cmd, args, _options);
+  if (_options.logger) {
+    _options.logger.trace(`RESULT: \nCODE: ${result.code}\nSTDOUT: ${result.stdout}\nSTDERR: ${result.stderr}`);
+  }
+  if (result.code !== 0) throw new Error(`Command failed with exit code ${result.code}: \n${result.stderr}`);
+  return options.retrieveStdStreams ? result : result.stdout;
 }
 
 /**
