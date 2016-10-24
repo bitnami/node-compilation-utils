@@ -39,11 +39,10 @@ describe('#runWithinEnvironment()', () => {
       info: write, trace: write, trace2: write, trace3: write, trace4: write
     };
     cu.runWithinEnvironment(testDir, 'pwd', null, {logger});
-    expect(result).to.contain('Executing: pwd');
-    expect(result).to.contain('RESULT: {"code":0,"stderr":"","stdout":"/tmp/compilation-utils-tests\\n"}');
+    expect(result).to.contain('Executing command: "pwd"');
   });
   it('throws an error if the command fails', () => {
-    expect(() => cu.runWithinEnvironment(testDir, 'false', null, null)).to.throw('Program exited with exit code 1');
+    expect(() => cu.runWithinEnvironment(testDir, 'false', null, null)).to.throw('Command failed with exit code 1');
   });
 });
 
@@ -70,9 +69,9 @@ describe('#configure()', () => {
     const logger = {
       info: write, trace: write, trace2: write, trace3: write, trace4: write
     };
-    cu.configure(testDir, 'this_is_a_test', {logger, env: {test: 1}});
-    expect(result).to.contain('ENVIRONMENT VARIABLES:\ntest=1');
-    expect(result).to.contain('"stdout":"this_is_a_test\\n"');
+    cu.configure(testDir, 'this_is_a_test', {logger, env: {test: '1'}});
+    expect(result).to.contain('ENVIRONMENT VARIABLES:\ntest="1"');
+    expect(result).to.contain('STDOUT: this_is_a_test');
   });
 });
 
