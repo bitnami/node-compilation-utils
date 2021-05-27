@@ -1,4 +1,4 @@
-[![Build Status](https://api.travis-ci.org/bitnami/node-compilation-utils.svg?branch=master)](http://travis-ci.org/bitnami/node-compilation-utils)
+[![Build Status](https://github.com/bitnami/node-compilation-utils/actions/workflows/main.yml/badge.svg)](https://github.com/bitnami/node-compilation-utils/actions/workflows/main.yml)
 
 # Compilation Utils
 
