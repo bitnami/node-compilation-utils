@@ -1,6 +1,6 @@
 {
   "name": "compilation-utils",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Some functions utils for compilation",
   "main": "index.js",
   "repository": {
@@ -22,14 +22,14 @@
   "author": "Bitnami",
   "license": "GPL-2.0",
   "dependencies": {
-    "common-utils": "github:bitnami/node-common-utils#v2.1.0",
-    "nami-utils": "github:bitnami/nami-utils#v2.0.1"
+    "common-utils": "git+https://git@github.com/bitnami/node-common-utils#v2.2.1",
+    "nami-utils": "git+https://git@github.com/bitnami/nami-utils#v2.0.3"
   },
   "devDependencies": {
-    "bitnami-gulp-common-tasks": "github:bitnami/gulp-common-tasks#v2.0.4",
+    "bitnami-gulp-common-tasks": "git+https://git@github.com/bitnami/gulp-common-tasks#v2.0.4",
     "chai": "^3.5.0",
     "eslint": "^2.11.1",
-    "eslint-config-bitnami": "github:bitnami/eslint-config-bitnami#v1.0.0",
+    "eslint-config-bitnami": "git+https://git@github.com/bitnami/eslint-config-bitnami#v1.0.0",
     "eslint-plugin-import": "^1.8.1",
     "gulp": "^3.9.1",
     "jsdoc": "^3.4.1"
